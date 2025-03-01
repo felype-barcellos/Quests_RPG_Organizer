@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quests - Gerenciador de RPG</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Barra lateral de navegação -->
+        <aside class="sidebar">
+            <h1>Quests</h1>
+            <nav>
+                <button id="addQuestBtn" class="primary-btn">Nova Quest</button>
+                <div class="filter-section">
+                    <h3>Filtrar por Status</h3>
+                    <select id="statusFilter">
+                        <option value="todos">Todos</option>
+                        <option value="pendente">Pendente</option>
+                        <option value="em-progresso">Em Progresso</option>
+                        <option value="concluida">Concluída</option>
+                    </select>
+                </div>
+                <div class="filter-section">
+                    <h3>Buscar por Tags</h3>
+                    <input type="text" id="tagFilter" placeholder="Digite uma tag..." class="tag-input">
+                </div>
+                <div class="filter-section">
+                    <h3>Ordenar por</h3>
+                    <select id="sortField" class="tag-input">
+                        <option value="title">Título</option>
+                        <option value="startDate">Data de Início</option>
+                    </select>
+                    <select id="sortOrder" class="tag-input" style="margin-top: 10px;">
+                        <option value="asc">Crescente</option>
+                        <option value="desc">Decrescente</option>
+                    </select>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Área principal de conteúdo -->
+        <main class="main-content">
+            <div id="questsList" class="quests-grid"></div>
+        </main>
+
+        <!-- Modal para adicionar/editar quest -->
+        <div id="questModal" class="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle">Nova Quest</h2>
+                <form id="questForm">
+                    <input type="hidden" id="questId">
+                    <div class="form-group">
+                        <label for="questTitle">Título:</label>
+                        <input type="text" id="questTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="questDescription">Descrição:</label>
+                        <textarea id="questDescription" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="questTags">Tags (separadas por vírgula):</label>
+                        <input type="text" id="questTags" placeholder="Ex: combate, história, tesouro">
+                    </div>
+                    <div class="form-group">
+                        <label for="questStatus">Status:</label>
+                        <select id="questStatus">
+                            <option value="pendente">Pendente</option>
+                            <option value="em-progresso">Em Progresso</option>
+                            <option value="concluida">Concluída</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="questStartDate">Data de Início:</label>
+                        <input type="date" id="questStartDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="questEndDate">Data de Fim:</label>
+                        <input type="date" id="questEndDate">
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="primary-btn">Salvar</button>
+                        <button type="button" class="secondary-btn" onclick="closeModal()">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

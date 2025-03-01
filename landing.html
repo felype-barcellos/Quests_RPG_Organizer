@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao Gerenciador de RPG</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #4a0404 0%, #8b0000 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature {
+            background: rgba(139, 0, 0, 0.2);
+            padding: 1.5rem;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature h3 {
+            margin-bottom: 1rem;
+            color: #d4af37;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #4a0404;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciador de Quests RPG</h1>
+        <p>Organize suas aventuras de RPG de forma eficiente e intuitiva</p>
+
+        <div class="features">
+            <div class="feature">
+                <h3>Organização</h3>
+                <p>Gerencie todas as suas quests em um só lugar, com status e tags personalizadas</p>
+            </div>
+            <div class="feature">
+                <h3>Acompanhamento</h3>
+                <p>Acompanhe o progresso das missões com datas de início e término</p>
+            </div>
+            <div class="feature">
+                <h3>Filtragem</h3>
+                <p>Encontre rapidamente as quests que procura com filtros por status e tags</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="cta-button">Acessar o Gerenciador</a>
+    </div>
+</body>
+</html>
